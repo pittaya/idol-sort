@@ -1,6 +1,6 @@
-# idol-sort-pwa
+# Idol Sort
 
-> A Vue.js project
+BNK48 sort website, based on Vue.js PWA template.
 
 ## Build Setup
 
@@ -24,4 +24,12 @@ npm run e2e
 npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## License
+
+**Remark:** *Member photos are taken from Official BNK48 Fanpage.*
+
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, I has waived all copyright and related or neighboring rights to this work.
+
+This data is provided "as is", without warranty of any kind.
