@@ -11,14 +11,22 @@
         <main v-if="L && R">
           <p>Battle No. <span id="num-battle">{{ num_battle }}</span></p>
           <div class="mem mem-left" @click="choseleft">
-            <div class="photo-wrap"><img class="photo" :src="'./static/img/profiles/' + L.slug + '.jpg'"></div>
+            <div class="photo-wrap">
+              <transition name="fade">
+                <img class="photo" :key="L.slug" :src="'./static/img/profiles/' + L.slug + '.jpg'">
+              </transition>
+            </div>
             <div class="name">
               <p class="nickname">{{ L.nick }}</p>
               <p class="realname">{{ L.name }}</p>
             </div>
           </div>
           <div class="mem mem-right" @click="choseright">
-            <div class="photo-wrap"><img class="photo" :src="'./static/img/profiles/' + R.slug + '.jpg'"></div>
+            <div class="photo-wrap">
+              <transition name="fade">
+                <img class="photo" :key="R.slug" :src="'./static/img/profiles/' + R.slug + '.jpg'">
+              </transition>
+            </div>
             <div class="name">
               <p class="nickname">{{ R.nick }}</p>
               <p class="realname">{{ R.name }}</p>
@@ -274,6 +282,7 @@ main .mem .photo-wrap {
   height: 0px;
   padding-bottom: 100%;
   overflow: hidden;
+  background-color: #ededed;
 }
 main .mem img.photo {
   width: 100%;
@@ -394,5 +403,14 @@ button {
 }
 button:hover {
   background-color: #c599bc;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-to {
+  opacity: 1;
+}
+.fade-enter-active {
+  transition: all .5s ease;
 }
 </style>
