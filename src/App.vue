@@ -13,7 +13,7 @@
           <div class="mem mem-left" @click="choseleft">
             <div class="photo-wrap">
               <transition name="fade">
-                <img class="photo" :key="L.slug" :src="'./static/img/profiles/' + L.slug + '.jpg'">
+                <img class="photo" :key="L.slug" :src="'./static/img/profiles/' + L.slug + '-02.png'">
               </transition>
             </div>
             <div class="name">
@@ -24,7 +24,7 @@
           <div class="mem mem-right" @click="choseright">
             <div class="photo-wrap">
               <transition name="fade">
-                <img class="photo" :key="R.slug" :src="'./static/img/profiles/' + R.slug + '.jpg'">
+                <img class="photo" :key="R.slug" :src="'./static/img/profiles/' + R.slug + '-02.png'">
               </transition>
             </div>
             <div class="name">
@@ -47,7 +47,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(r, i) in ranking">
+            <tr v-for="(r, i) in ranking" :key="i">
               <td>{{ r.rank }}</td>
               <td class="name"><span class="nickname">{{ r.member.nick }}</span> {{ r.member.name }}</td>
               <td>{{ r.score }} pts</td>
@@ -67,6 +67,10 @@
       </section>        
       <section class="history">
         <div class="row column">
+          <dl>
+            <dt>2018-02-07</dt>
+            <dd>เปลี่ยนรูปติดบัตร / เอาเมมเบอร์ที่จบการศึกษาแล้วออก</dd>
+          </dl>
           <dl>
             <dt>2017-06-10</dt>
             <dd>ปรับวิธีคิดคะแนน / ปรับหน้าตา / เปลี่ยนรูปติดบัตร</dd>
@@ -95,7 +99,6 @@ export default {
       members: [
         {'name': 'เฌอปราง อารีย์กุล', 'nick': 'Cherprang', 'slug': 'cherprang'},
         {'name': 'คริสติน ลาร์เซ่น', 'nick': 'Namhom', 'slug': 'namhom'},
-        {'name': 'ไอรดา ธวัชผ่องศรี', 'nick': 'Cincin', 'slug': 'cincin'},
         {'name': 'อิสราภา ธวัชภักดี', 'nick': 'Tarwaan', 'slug': 'tarwaan'},
         {'name': 'เจนนิษฐ์ โอ่ประเสริฐ', 'nick': 'Jennis', 'slug': 'jennis'},
         {'name': 'เจตสุภา เครือแตง', 'nick': 'Jan', 'slug': 'jan'},
@@ -121,7 +124,6 @@ export default {
         {'name': 'สุชญา แสนโคต', 'nick': 'Jib', 'slug': 'jib'},
         {'name': 'วฑูศิริ ภูวปัญญาสิริ', 'nick': 'Korn', 'slug': 'korn'},
         {'name': 'วรัทยา ดีสมเลิศ', 'nick': 'Kaimook', 'slug': 'kaimook'},
-        {'name': 'วรรษมณฑ์ พงษ์วานิช', 'nick': 'Kidcat', 'slug': 'kidcat'},
         {'name': 'รินะ อิสึตะ', 'nick': 'Izurina', 'slug': 'izutarina'}
       ],
       L: null,
