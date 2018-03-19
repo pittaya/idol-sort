@@ -98,10 +98,8 @@ export default {
     return {
       members: [
         {'name': 'เฌอปราง อารีย์กุล', 'nick': 'Cherprang', 'slug': 'cherprang'},
-        {'name': 'คริสติน ลาร์เซ่น', 'nick': 'Namhom', 'slug': 'namhom'},
         {'name': 'อิสราภา ธวัชภักดี', 'nick': 'Tarwaan', 'slug': 'tarwaan'},
         {'name': 'เจนนิษฐ์ โอ่ประเสริฐ', 'nick': 'Jennis', 'slug': 'jennis'},
-        {'name': 'เจตสุภา เครือแตง', 'nick': 'Jan', 'slug': 'jan'},
         {'name': 'จิรดาภา อินทจักร', 'nick': 'Pupe', 'slug': 'pupe'},
         {'name': 'กานต์ธีรา วัชรทัศนกุล', 'nick': 'Noey', 'slug': 'noey'},
         {'name': 'กรภัทร์ นิลประภา', 'nick': 'Kate', 'slug': 'kate'},
