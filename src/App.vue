@@ -5,7 +5,7 @@
     </header>
     <div class="container">
       <div class="instruction">
-        จัดอันดับเมมเบอร์ที่ชื่นชอบด้วยการเลือกทีละคู่ หรือถ้าตัดใจไม่ได้ก็ให้เลือกเสมอนะ เลือกไปเรื่อยๆ เสร็จแล้วจะมีผลลัพธ์ออกมาให้ดู
+        จัดอันดับเมมเบอร์ที่ชื่นชอบด้วยการเลือกทีละคู่ หรือถ้าตัดใจไม่ได้ก็ให้เลือกเสมอนะ เลือกไปเรื่อยๆ (ประมาณ 100 ครั้ง) เสร็จแล้วจะมีผลลัพธ์ออกมาให้ดู
       </div>
       <template v-if="ranking.length == 0">
         <main v-if="L && R">
@@ -13,7 +13,7 @@
           <div class="mem mem-left" @click="choseleft">
             <div class="photo-wrap">
               <transition name="fade">
-                <img class="photo" :key="L.slug" :src="'./static/img/profiles/' + L.slug + '-02.png'">
+                <img class="photo" :key="L.slug" :src="'./static/img/profiles/' + L.slug + '-03.jpg'">
               </transition>
             </div>
             <div class="name">
@@ -24,7 +24,7 @@
           <div class="mem mem-right" @click="choseright">
             <div class="photo-wrap">
               <transition name="fade">
-                <img class="photo" :key="R.slug" :src="'./static/img/profiles/' + R.slug + '-02.png'">
+                <img class="photo" :key="R.slug" :src="'./static/img/profiles/' + R.slug + '-03.jpg'">
               </transition>
             </div>
             <div class="name">
@@ -67,6 +67,10 @@
       </section>        
       <section class="history">
         <div class="row column">
+          <dl>
+            <dt>2018-03-25</dt>
+            <dd>เปลี่ยนรูปติดบัตร</dd>
+          </dl>
           <dl>
             <dt>2018-02-07</dt>
             <dd>เปลี่ยนรูปติดบัตร / เอาเมมเบอร์ที่จบการศึกษาแล้วออก</dd>
